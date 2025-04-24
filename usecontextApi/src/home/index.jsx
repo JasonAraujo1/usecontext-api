@@ -1,7 +1,19 @@
-import React from 'react'
+import { useContext } from 'react';
+import Context from '../context/context';
 
 export default function Home() {
+  const { usersPostsData } = useContext(Context);
   return (
-    <div>Home</div>
+    <div>
+      <h1>Lista de Posts</h1>
+      <ul>
+        {usersPostsData.map((item) => (
+          <>
+            <h3>{item.title}</h3>
+            <span>{item.body}</span>
+          </>
+        ))}
+      </ul>
+    </div>
   )
 }
