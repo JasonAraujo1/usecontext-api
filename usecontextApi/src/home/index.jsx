@@ -9,8 +9,10 @@ export default function Home() {
       <ul>
         {usersPostsData.map((item) => (
           <>
-            <h3>{item.title}</h3>
+            <br />
+            <h2 className='text-2xl'>Title: {item.title}</h2>
             <span>{item.body}</span>
+            <br />
           </>
         ))}
       </ul>

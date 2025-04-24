@@ -2,11 +2,11 @@ import { NavLink } from "react-router";
 
 export default function Navbar() {
     return (
-      <nav className="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
+      <nav className="bg-gray-800 text-white px-6 py-4 flex justify-between items-center mb-10 ">
        
-        <ul className="flex space-x-6">
-          <li>
-            <NavLink to={'/#'} className="hover:text-red-500">Home</NavLink>
+        <ul className="flex space-x-6 ">
+          <li >
+            <NavLink to={'/#'} className="hover:text-red-400">Home</NavLink>
           </li>
           <li>
             <NavLink to={"/comments"} className="hover:text-gray-300">Comments</NavLink>
@@ -15,7 +15,8 @@ export default function Navbar() {
             <NavLink to={"/todos"} className="hover:text-gray-300">Todos</NavLink>
           </li>
         </ul>
-      </nav>
+      </nav >
+      
     );
   }
   

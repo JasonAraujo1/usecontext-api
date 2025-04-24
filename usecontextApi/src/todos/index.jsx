@@ -4,13 +4,13 @@ import Context from '../context/context';
 export default function Todos() {
   const { usersTodosData } = useContext(Context);
   return (
-    <div>
+    <div >
       <h1>Todos</h1>
       <ul>
         {usersTodosData.map((item) => (
           <>
             <br />
-            <h3>{item.title}</h3>
+            <h2>{item.title}</h2>
             <br />
           </>
         ))}
