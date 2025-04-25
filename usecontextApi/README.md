@@ -1,12 +1,64 @@
-# React + Vite
+# useContext API Example
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto demonstra o uso da API `useContext` do React para gerenciar estado global em uma aplicação. A API `useContext` permite compartilhar dados entre componentes sem a necessidade de passar props manualmente por cada nível da árvore de componentes.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Gerenciamento de estado global utilizando `useContext`.
+- Compartilhamento de dados entre componentes de forma eficiente.
+- Exemplo prático de como evitar o "prop drilling".
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+/src
+    /components
+        - ComponentA.js
+        - ComponentB.js
+        - ComponentC.js
+    /context
+        - AppContext.js
+    - App.js
+    - index.js
+```
+
+### Principais Arquivos
+
+- **AppContext.js**: Define o contexto e o provedor para encapsular os componentes que precisam acessar o estado global.
+- **ComponentA, ComponentB, ComponentC**: Exemplos de componentes que consomem o contexto.
+- **App.js**: Configura o provedor do contexto e organiza os componentes.
+
+## Como Executar
+
+1. Clone o repositório:
+     ```bash
+     git clone <url-do-repositorio>
+     ```
+2. Instale as dependências:
+     ```bash
+     npm install
+     ```
+3. Inicie o servidor de desenvolvimento:
+     ```bash
+     npm start
+     ```
+
+## Tecnologias Utilizadas
+
+- React
+- JavaScript (ES6+)
+- CSS (opcional)
+
+## Como Funciona
+
+1. O contexto é criado em `AppContext.js` utilizando `React.createContext`.
+2. O provedor do contexto encapsula os componentes no arquivo `App.js`.
+3. Os componentes consomem os dados do contexto utilizando o hook `useContext`.
+
+## Contribuição
+
+Sinta-se à vontade para abrir issues ou enviar pull requests para melhorias.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
